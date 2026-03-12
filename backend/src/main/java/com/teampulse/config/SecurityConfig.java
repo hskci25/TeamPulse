@@ -32,7 +32,7 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/auth/register", "/api/auth/login").permitAll()
+                .requestMatchers("/api/auth/register", "/api/auth/login", "/api/health").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/plans/me").authenticated()
                 .requestMatchers(HttpMethod.GET, "/api/plans/*").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/plans/*/vote").permitAll()

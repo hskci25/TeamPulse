@@ -17,8 +17,8 @@ public class DeadlineScheduler {
         this.planService = planService;
     }
 
-    /** Run every 1 minute to close plans past deadline and send result emails. First run 30s after startup. */
-    @Scheduled(initialDelay = 30_000, fixedRate = 60_000)
+    /** Run every 1 hour to close plans past deadline and send result emails. First run 5 minutes after startup. */
+    @Scheduled(initialDelay = 300_000, fixedRate = 3_600_000)
     public void processDeadlines() {
         int processed = planService.processDeadlinePassed();
         log.info("Deadline scheduler run: {} plan(s) past deadline (processed)", processed);

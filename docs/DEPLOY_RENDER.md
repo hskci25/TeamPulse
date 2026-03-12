@@ -105,13 +105,73 @@ Set these in the Render dashboard under **Environment** (or in `render.yaml` as 
 
 ---
 
-## Frontend (Static Site or Web Service)
+---
 
-Deploy the frontend separately (e.g. **Static Site** on Render, or Vercel/Netlify).
+## Step-by-step: Deploy frontend on Render (Static Site)
 
-1. **Build command:** `cd frontend && npm ci && npm run build`
-2. **Publish directory:** `frontend/dist`
-3. **Environment:** Set `VITE_API_URL` to your backend URL (e.g. `https://teampulse-api.onrender.com`). The frontend uses this for all API calls in production. (Dev uses relative `/api` with Vite proxy.)
+### Step 1: Create a Static Site
+
+1. Render Dashboard → **New +** → **Static Site**.
+2. Connect the **same GitHub repo** (TeamPulse).
+3. Click **Connect** next to the repo.
+
+### Step 2: Configure the frontend
+
+1. **Name:** e.g. `teampulse-frontend` (or your preferred name).
+2. **Branch:** e.g. `main`.
+3. **Root Directory:** `frontend`  
+   (Leave blank if your repo root is the frontend; if the repo has both backend and frontend folders, set **`frontend`**.)
+4. **Build Command:**  
+   `npm install && npm run build`
+5. **Publish Directory:**  
+   `dist`  
+   (Vite outputs to `dist` inside the root directory — so with Root Directory `frontend` it’s `dist`; without root dir it’s also `dist`.)
+
+### Step 3: Add environment variable (backend URL)
+
+1. **Advanced** → **Add Environment Variable**.
+2. **Key:** `VITE_API_URL`  
+3. **Value:** Your **backend** URL, no trailing slash, e.g.  
+   `https://teampulse-backend.onrender.com`  
+   (Use the exact URL Render gave your backend service.)
+
+Save. Render will build and deploy. Your frontend URL will be something like `https://teampulse-frontend.onrender.com`.
+
+### Step 4: Update backend `APP_BASE_URL` (important)
+
+After the frontend is live, you **must** set the backend’s **`APP_BASE_URL`** to this frontend URL so email vote links point to the right place.
+
+1. Open your **backend** service on Render → **Environment**.
+2. Add or edit **`APP_BASE_URL`**.
+3. Set it to your **frontend** URL, e.g.  
+   `https://teampulse-frontend.onrender.com`  
+   (no trailing slash).
+4. Save. Render will redeploy the backend.
+
+### Step 5: Fix 404 on direct links (vote, plan detail, etc.)
+
+The frontend is a single-page app (SPA). Routes like `/vote/69b234395f3506620bad9bac` are handled by React Router in the browser, but if someone opens that URL directly (e.g. from an email link), the server looks for a file at that path and returns **404 Not Found**.
+
+Add a **Rewrite** rule so all non-file requests serve `index.html`:
+
+1. In Render Dashboard, open your **frontend** Static Site.
+2. Go to the **Redirects/Rewrites** tab (in the left sidebar or under Settings).
+3. Add a rule:
+   - **Source Path:** `/*`
+   - **Destination Path:** `/index.html`
+   - **Action:** **Rewrite** (not Redirect)
+4. Save.
+
+After this, opening `https://teampulse-1.onrender.com/vote/69b234395f3506620bad9bac?token=...` will serve your app’s `index.html` at that URL, and React Router will show the vote page. Real files (JS, CSS, etc.) are still served normally.
+
+---
+
+## Frontend — reference
+
+1. **Build command:** `npm install && npm run build` (with Root Directory `frontend`: runs from `frontend/`).
+2. **Publish directory:** `dist`.
+3. **Environment:** `VITE_API_URL` = your backend URL (e.g. `https://teampulse-backend.onrender.com`).
+4. **SPA routing:** Add a Rewrite rule: Source `/*` → Destination `/index.html`, Action **Rewrite**, so direct links (e.g. `/vote/:id`) work instead of 404.
 
 ---
 

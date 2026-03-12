@@ -35,7 +35,7 @@ export default function MyPlans() {
 
   useEffect(() => {
     getMyPlans()
-      .then((list) => setPlans(list || []))
+      .then((list) => setPlans(Array.isArray(list) ? list : []))
       .catch((err) => setError(err.message || 'Failed to load plans.'))
       .finally(() => setLoading(false));
   }, []);
@@ -75,8 +75,8 @@ export default function MyPlans() {
             </div>
           ) : (
             <ul className="divide-y divide-slate-100">
-              {plans.map((plan) => (
-                <li key={plan.id}>
+              {plans.map((plan, index) => (
+                <li key={plan.id || index}>
                   <Link
                     to={`/plans/${plan.id}`}
                     className="flex flex-col sm:flex-row sm:items-center gap-2 p-4 hover:bg-slate-50 transition-colors text-left"

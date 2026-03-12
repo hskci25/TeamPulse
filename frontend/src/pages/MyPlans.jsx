@@ -15,7 +15,13 @@ const IconGroup = () => (
 
 function formatDate(isoString) {
   if (!isoString) return '—';
-  return new Date(isoString).toLocaleDateString(undefined, { dateStyle: 'medium', timeStyle: 'short' });
+  return new Date(isoString).toLocaleString(undefined, {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+  });
 }
 
 function statusBadge(status) {

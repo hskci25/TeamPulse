@@ -93,7 +93,13 @@ export default function PlanDetail() {
   const total = plan.memberCount ?? 0;
   const isPending = plan.status === 'PENDING';
   const deadlineStr = plan.deadline
-    ? new Date(plan.deadline).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' })
+    ? new Date(plan.deadline).toLocaleString(undefined, {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+      })
     : '';
 
   const statusBadge = () => {

@@ -101,7 +101,15 @@ export default function Vote() {
   }
 
   const isPending = plan?.status === 'PENDING';
-  const deadlineStr = plan?.deadline ? new Date(plan.deadline).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' }) : '';
+  const deadlineStr = plan?.deadline
+    ? new Date(plan.deadline).toLocaleString(undefined, {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+      })
+    : '';
   const total = plan?.memberCount ?? 0;
   const count = voteCount ?? plan?.voteCount ?? 0;
   const pct = total > 0 ? Math.round((count / total) * 100) : 0;

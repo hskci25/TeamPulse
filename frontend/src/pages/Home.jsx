@@ -100,11 +100,7 @@ export default function Home() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 pt-12">
-            <div className="flex flex-col items-center">
-              <span className="text-2xl sm:text-3xl font-extrabold text-slate-900">10k+</span>
-              <span className="text-xs font-bold uppercase tracking-widest text-slate-500 mt-1">Teams Active</span>
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 pt-12">
             <div className="flex flex-col items-center">
               <span className="text-2xl sm:text-3xl font-extrabold text-slate-900">0</span>
               <span className="text-xs font-bold uppercase tracking-widest text-slate-500 mt-1">Logins Required</span>

@@ -1,0 +1,22 @@
+# All secrets and environment-specific values come from environment variables.
+# On Render: set these in the service Environment tab. Locally: export or use .env.
+
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/teampulse}
+      auto-index-creation: true
+
+server:
+  port: ${PORT:8080}
+
+resend:
+  api-key: ${RESEND_API_KEY:}
+  from-email: ${RESEND_FROM_EMAIL:TeamPulse <onboarding@resend.dev>}
+
+app:
+  base-url: ${APP_BASE_URL:http://localhost:5177}
+
+jwt:
+  secret: ${JWT_SECRET:teampulse-default-secret-change-in-production-min-256bits}
+  validity-ms: ${JWT_VALIDITY_MS:604800000}

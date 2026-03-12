@@ -1,0 +1,22 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://ashutosh:hskci%4025@cluster0.3i1cleo.mongodb.net/teampulse?retryWrites=true&w=majority&appName=Cluster0
+      auto-index-creation: true
+
+server:
+  port: ${PORT:8080}
+
+# Resend (set RESEND_API_KEY in env)
+resend:
+  api-key: ${RESEND_API_KEY:}
+  from-email: ${RESEND_FROM_EMAIL:TeamPulse <onboarding@resend.dev>}
+
+# App URL for vote links — must be your FRONTEND URL (where /vote/... is served). Backend (8080) is only the API.
+app:
+  base-url: ${APP_BASE_URL:http://localhost:5177}
+
+# JWT for login (set JWT_SECRET in production, min 256 bits)
+jwt:
+  secret: ${JWT_SECRET:teampulse-default-secret-change-in-production-min-256bits}
+  validity-ms: ${JWT_VALIDITY_MS:604800000}

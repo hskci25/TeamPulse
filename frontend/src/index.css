@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "DM Sans", system-ui, ui-sans-serif, sans-serif;
+  --color-primary: #5048e5;
+  --color-primary-hover: #4338ca;
+  --color-background-light: #f6f6f8;
+}
+
+:root {
+  font-family: "Inter", "DM Sans", system-ui, ui-sans-serif, sans-serif;
+  line-height: 1.6;
+  color: #0f172a;
+  background-color: var(--color-background-light, #f6f6f8);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Form inputs - consistent focus ring */
+input, select, textarea {
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+/* Card hover lift */
+.card-hover {
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.card-hover:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+/* Status badges */
+.badge {
+  @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+}
+.badge-pending { @apply bg-amber-100 text-amber-800; }
+.badge-confirmed { @apply bg-emerald-100 text-emerald-800; }
+.badge-cancelled { @apply bg-slate-100 text-slate-600; }
+
+/* Loading pulse */
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+.animate-pulse-soft {
+  animation: pulse-soft 1.5s ease-in-out infinite;
+}

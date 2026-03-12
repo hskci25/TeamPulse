@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Plan Details - TeamPulse</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5048e5",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#121121",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex min-h-screen flex-col">
+<!-- Global Shell Header -->
+<header class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-6 md:px-20 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">TeamPulse</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+</button>
+</div>
+<div class="bg-primary/10 border border-primary/20 aspect-square rounded-full size-10 flex items-center justify-center overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Professional user profile avatar photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj5FeOOGQeL1sn3VzdN-jAMt9vKHfyovJ_XhILKjTGpQW7f5ADypYxS9bQgbKrEfkFG74iTDcE614qznwVnvw6hyxT7nGOzkTuDAxOwm6IlUP0TRQQi--zwoPzFPbuwbRRuLKnRwRE5LaaM3in0viSk8XsQDGU0RR-Ch997qqU66nYqv9JZo0u4EerRkH496umEKKsigA5Jnvz_lo3KfFS45b5sIKU9rnkR0AvlnPD4dQA8RpFeE9WodW7-_81OaF_kN0NJjFl0cQ4"/>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 py-12 px-6">
+<div class="max-w-[768px] mx-auto">
+<!-- Breadcrumb/Back Link -->
+<nav class="mb-8">
+<a class="flex items-center gap-2 text-primary hover:underline font-medium text-sm transition-all" href="#">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+                        Back to Home
+                    </a>
+</nav>
+<!-- Plan Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+<div class="space-y-1">
+<h1 class="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">Friday Team Lunch</h1>
+<div class="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">group</span>
+                                4 of 6 members have voted
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">event</span>
+                                Deadline: Oct 24, 6:00 PM
+                            </div>
+</div>
+</div>
+<div class="flex items-center">
+<span class="px-4 py-1.5 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 text-xs font-bold tracking-wider uppercase">
+                            Pending
+                        </span>
+</div>
+</div>
+<!-- Options Section -->
+<section class="bg-white dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden mb-8">
+<div class="px-6 py-5 border-b border-slate-200 dark:border-slate-800">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white">Options</h2>
+</div>
+<div class="divide-y divide-slate-100 dark:divide-slate-800">
+<!-- Option Row 1 -->
+<div class="px-6 py-5 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">local_pizza</span>
+</div>
+<div>
+<p class="font-semibold text-slate-900 dark:text-white">Pizza Party</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Main choice</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex -space-x-2">
+<img alt="Voter 1" class="size-6 rounded-full border-2 border-white dark:border-slate-900" data-alt="Voter profile avatar small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd3mOlDY08p4LuwNx7AEDXAQsexDin7CXg0aHQLle_r0wZ2iFo4ZCR1ZOyM_osTPKxQMBvoP_STWUD6AV3kpvibKPIneVMj0k2zi-k47pHCnXZt0g9CmST3yZzR-KuFAXqvBAQ16Si-FZ1Hl-oDe2dzLLeXKkiG-a1XfU2ZtxwzWVYlWoZmBU4gbAEWUvsxAeh0YNPbU4uMZUFmSrrQCVm6-HmhGkntr1DrK6Xwx3v489dWWbjrd_VxfeZDAYp2O3G43zHPfWqiYwy"/>
+<img alt="Voter 2" class="size-6 rounded-full border-2 border-white dark:border-slate-900" data-alt="Voter profile avatar small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPf_YlQEY4C4QBfZ4VxXppM0ybsTspNx4d-knsceyWUEeGEH0YaCCnkRL3i29FlfNBll-2CvFzFtwqvzAvLN2BDeNXKdtE3FAp9ueRCC6aHGFEoL4mdBSlc-QTBX9eMrXjFXYn-Xzw0mHPciBt8WtpKBFSgvvhoECpWy8f5cazJguQA1R0OVwYSKWWbwESpJ-ZefkuePj8TR9pHzp8CcwDS6PZ3YiZWuh7xe_tFXvWGpdi8cNfTandsBf4b5msQIUnoJWiuv4FTC_J"/>
+<img alt="Voter 3" class="size-6 rounded-full border-2 border-white dark:border-slate-900" data-alt="Voter profile avatar small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvA8zXySw0HLjcneh_lV_ySUtx3gpaHw6WwSRg8bl3iCHOda2sjnSEcUbmkbwspaHi2BbQIkPYOmB84m0ZNlTw1a_hArBFUnPCiDs6KpOxiDx5oh3z3riz5lpAaZ6_Jmx7FW4PFf7IiYa0zSCyo5LVLUK8hOtHG6uWeHpGFGIT-1nugFSnCnazwljUIgeRz3FjryBe310fNeIHuP-d-ZlL0FTX8SwcMVKV-ChXc_Onge-BjQFG0bhuuvR2YiuT5ybJs-6ey6wktqBK"/>
+</div>
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">3 votes</span>
+</div>
+</div>
+<!-- Option Row 2 -->
+<div class="px-6 py-5 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined">set_meal</span>
+</div>
+<div>
+<p class="font-semibold text-slate-900 dark:text-white">Sushi Night</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Traditional Japanese</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex">
+<img alt="Voter 4" class="size-6 rounded-full border-2 border-white dark:border-slate-900" data-alt="Voter profile avatar small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4EaAYDhyCtIY5sLkEAOEmFuj6W_iS7LjmlkwNkSGwQfbCTAKlzh3JomY8OMph1ZKEmaGivp-_lnm5OjGt8YQK1z-fnPHxgaqjx61ro5K7opkTuq6Qsbj-lAsqsQ2X4dvfczGlfo1gHQYKK9ippi4ioN4bNDod4j218HtOkYDMicC7TkcBB6ff4TF4neI5rI7RYsM5zFdchb-VihGzifUOfSoI85qPeWrAnPKSL3kv9GTfzaOuKG3rX9wY2wR6VNrsZdZnlbOAq9rb"/>
+</div>
+<span class="text-sm font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">1 vote</span>
+</div>
+</div>
+<!-- Option Row 3 -->
+<div class="px-6 py-5 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined">lunch_dining</span>
+</div>
+<div>
+<p class="font-semibold text-slate-900 dark:text-white">Burger Joint</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Casual dining</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-sm font-medium text-slate-400 dark:text-slate-600 bg-slate-50 dark:bg-slate-900 px-3 py-1 rounded-full">0 votes</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Information Note -->
+<div class="p-6 bg-primary/5 border border-primary/10 rounded-xl flex gap-4">
+<span class="material-symbols-outlined text-primary">info</span>
+<p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                        Members vote via their email link. Results and calendar invite are sent automatically when the deadline passes on <span class="font-semibold">Oct 24</span>.
+                    </p>
+</div>
+<!-- Action Footer -->
+<div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row gap-4 items-center justify-between">
+<div class="flex items-center gap-3">
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg font-bold text-sm shadow-sm transition-all">
+                            Remind Pending Members
+                        </button>
+<button class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+                            Edit Options
+                        </button>
+</div>
+<p class="text-xs text-slate-400 dark:text-slate-600">Created by Sarah Jones • 2 days ago</p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="py-10 border-t border-slate-200 dark:border-slate-800 text-center">
+<p class="text-sm text-slate-400 dark:text-slate-600">© 2024 TeamPulse Internal Tools</p>
+</footer>
+</div>
+</body></html>

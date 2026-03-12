@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create Plan - TeamPulse</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5048e5",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#121121",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .form-select-icon {
+            background-image: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(80,72,229)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1.5em 1.5em;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 md:px-10 py-3">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-6">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em]">TeamPulse</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile avatar icon circular" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACXNn3TZ-WIGBXBMR1X_h5N2flyJAxl4XPodFqx9Rlnymh1fag905n1HtV3OjgPOjJFVpt22N9IFY9YEM9UUR725PebO7pOOzTAmRGRkEBsvHAlSJO7rQ6jW7H3RjIZ51X6w3HJhR8GrGuX8X0fyfErSrAUFxMxQ3xCvUjoHSN9lLka1S3w9eZvGqxGiSIuObQrdxl-1rLL76cuDcQbJdV6TRJgTREi6l4NWRCG-BBMuwAW6QILUfyIF_2cvkzfhOKLHxaMgI2tcZu");'></div>
+</div>
+</header>
+<!-- Main Content Section -->
+<main class="flex flex-1 flex-col items-center py-10 px-4">
+<div class="w-full max-w-[640px] flex flex-col gap-8">
+<!-- Back Link -->
+<div>
+<a class="inline-flex items-center text-primary font-medium hover:underline text-sm transition-colors" href="#">
+<span class="material-symbols-outlined mr-1 text-lg">arrow_back</span>
+                        Back home
+                    </a>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-col gap-2">
+<h1 class="text-slate-900 dark:text-slate-100 text-3xl font-bold tracking-tight">Create a new plan</h1>
+<p class="text-slate-500 dark:text-slate-400">Set up a new activity or event for your team to vote on.</p>
+</div>
+<!-- Form Card -->
+<form class="flex flex-col gap-6 bg-white dark:bg-slate-900 p-8 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
+<!-- Email Input -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Your email <span class="text-primary">*</span></label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3" placeholder="alex@company.com" required="" type="email"/>
+<p class="text-xs text-slate-500 dark:text-slate-400">We only show teams you’re a member of.</p>
+</div>
+<!-- Team Selection -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Team <span class="text-primary">*</span></label>
+<select class="form-select-icon appearance-none w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3" required="">
+<option value="design-mumbai">Design Team (Mumbai)</option>
+<option value="eng-london">Engineering (London)</option>
+<option value="marketing-ny">Marketing (NY)</option>
+</select>
+</div>
+<!-- Plan Title -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Plan title <span class="text-primary">*</span></label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3" placeholder="e.g. Friday Lunch" required="" type="text"/>
+</div>
+<!-- Date & Time Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Activity date &amp; time (Optional)</label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3" type="datetime-local"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Voting deadline <span class="text-primary">*</span></label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3" required="" type="datetime-local"/>
+</div>
+</div>
+<!-- Options Section -->
+<div class="flex flex-col gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+<label class="text-base font-bold text-slate-900 dark:text-slate-100">Options</label>
+<!-- Option 1 -->
+<div class="flex flex-col md:flex-row gap-3">
+<div class="flex-1">
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3" type="text" value="Pizza Party"/>
+</div>
+<div class="md:w-1/3">
+<select class="form-select-icon appearance-none w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3">
+<option value="food">Food</option>
+<option value="activity">Activity</option>
+<option value="workshop">Workshop</option>
+</select>
+</div>
+<button class="text-slate-400 hover:text-red-500 transition-colors p-2" type="button">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<!-- Option 2 -->
+<div class="flex flex-col md:flex-row gap-3">
+<div class="flex-1">
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3" type="text" value="Sushi Night"/>
+</div>
+<div class="md:w-1/3">
+<select class="form-select-icon appearance-none w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3">
+<option selected="" value="food">Food</option>
+<option value="activity">Activity</option>
+<option value="workshop">Workshop</option>
+</select>
+</div>
+<button class="text-slate-400 hover:text-red-500 transition-colors p-2" type="button">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<button class="flex items-center gap-2 text-primary font-semibold text-sm hover:bg-primary/5 w-fit px-4 py-2 rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">add</span>
+                            Add option
+                        </button>
+</div>
+<!-- Submit -->
+<div class="pt-6">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all transform active:scale-[0.98]" type="submit">
+                            Create plan
+                        </button>
+</div>
+</form>
+<!-- Help/Footer info -->
+<div class="flex flex-col items-center gap-4 text-center">
+<p class="text-slate-500 dark:text-slate-400 text-sm">
+                        Plans are shared with all members of the selected team.<br/>
+                        Participants will receive an email notification.
+                    </p>
+</div>
+</div>
+</main>
+</div>
+</body></html>

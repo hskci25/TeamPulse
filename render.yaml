@@ -1,0 +1,25 @@
+# Render Blueprint: deploy backend from backend/ with Docker.
+# Set environment variables in the Render dashboard (Environment tab).
+# See docs/DEPLOY_RENDER.md for required env vars.
+
+services:
+  - type: web
+    runtime: docker
+    name: teampulse-backend
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        generateValue: false
+      - key: MONGODB_URI
+        sync: false
+      - key: APP_BASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: RESEND_API_KEY
+        sync: false
+      - key: RESEND_FROM_EMAIL
+        sync: false
+      - key: JWT_VALIDITY_MS
+        sync: false

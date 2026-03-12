@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TeamPulse - Vote</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5048e5",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#121121",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex flex-col min-h-screen">
+<!-- Global Shell Header -->
+<header class="w-full border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-1.5 rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">grid_view</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">TeamPulse</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-background-dark"></span>
+</button>
+<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden border-2 border-slate-100 dark:border-slate-800" data-alt="User profile avatar portrait">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcQnD6oih5211mdPlxTqPW8CV1HPvjs2hu0dIf9PMoIearFwfD1P-fbR3ef5eFYioQ7AwGXFuHEsJRgt3Zf7k6KBOSwXbdfXe9X7upj5liOz_yTCDIHLVWmrB4fnhhYB3kzk6U4GCKqYmX1aGtPc9GfU1InmGaj129tcDOssjen_2uaTidBvogNsLgi-u4k70WBkxZB8FU19cb66cYi5KnkDdWECYNI5Mz8FrLsR1I-eAV3tfIz3TbhjNyhHS-Qgnq58Umk7CTykiZ"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col items-center justify-start py-12 px-4">
+<div class="w-full max-w-[640px] space-y-8">
+<!-- Heading & Subheading -->
+<div class="text-center space-y-2">
+<h1 class="text-4xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">Friday Team Lunch</h1>
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-slate-200/50 dark:bg-slate-800/50 rounded-full text-sm font-medium text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-base">visibility_off</span>
+                        Anonymous Voting
+                    </div>
+</div>
+<!-- Participation Stats Card -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+<div class="flex justify-between items-end">
+<div class="space-y-1">
+<p class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Current Progress</p>
+<p class="text-lg font-medium text-slate-900 dark:text-slate-100">4 of 6 members have voted</p>
+</div>
+<p class="text-2xl font-bold text-primary">66%</p>
+</div>
+<div class="w-full h-3 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-2/3 rounded-full transition-all"></div>
+</div>
+<div class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 italic">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                        Vote by: Tomorrow, 6:00 PM
+                    </div>
+</div>
+<!-- Voting Options -->
+<div class="space-y-4">
+<p class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider px-1">Select one option</p>
+<form class="space-y-3">
+<!-- Option 1 -->
+<label class="group relative flex items-center justify-between p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-xl cursor-pointer hover:border-primary/50 dark:hover:border-primary/50 transition-all has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center justify-center">
+<input class="peer appearance-none w-6 h-6 border-2 border-slate-300 dark:border-slate-700 rounded-full checked:border-primary transition-all" name="lunch-vote" type="radio" value="pizza"/>
+<div class="absolute w-3 h-3 bg-primary rounded-full scale-0 peer-checked:scale-100 transition-transform"></div>
+</div>
+<div class="flex flex-col">
+<span class="text-lg font-semibold text-slate-900 dark:text-slate-100 group-hover:text-primary transition-colors">Pizza Party</span>
+<span class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mt-0.5">Category: FOOD</span>
+</div>
+</div>
+<div class="flex items-center justify-center w-10 h-10 bg-slate-100 dark:bg-slate-800 rounded-lg group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400 group-hover:text-primary">local_pizza</span>
+</div>
+</label>
+<!-- Option 2 -->
+<label class="group relative flex items-center justify-between p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-xl cursor-pointer hover:border-primary/50 dark:hover:border-primary/50 transition-all has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center justify-center">
+<input class="peer appearance-none w-6 h-6 border-2 border-slate-300 dark:border-slate-700 rounded-full checked:border-primary transition-all" name="lunch-vote" type="radio" value="sushi"/>
+<div class="absolute w-3 h-3 bg-primary rounded-full scale-0 peer-checked:scale-100 transition-transform"></div>
+</div>
+<div class="flex flex-col">
+<span class="text-lg font-semibold text-slate-900 dark:text-slate-100 group-hover:text-primary transition-colors">Sushi Night</span>
+<span class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mt-0.5">Category: FOOD</span>
+</div>
+</div>
+<div class="flex items-center justify-center w-10 h-10 bg-slate-100 dark:bg-slate-800 rounded-lg group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400 group-hover:text-primary">set_meal</span>
+</div>
+</label>
+<!-- Option 3 -->
+<label class="group relative flex items-center justify-between p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-xl cursor-pointer hover:border-primary/50 dark:hover:border-primary/50 transition-all has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center justify-center">
+<input class="peer appearance-none w-6 h-6 border-2 border-slate-300 dark:border-slate-700 rounded-full checked:border-primary transition-all" name="lunch-vote" type="radio" value="burger"/>
+<div class="absolute w-3 h-3 bg-primary rounded-full scale-0 peer-checked:scale-100 transition-transform"></div>
+</div>
+<div class="flex flex-col">
+<span class="text-lg font-semibold text-slate-900 dark:text-slate-100 group-hover:text-primary transition-colors">Burger Joint</span>
+<span class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mt-0.5">Category: FOOD</span>
+</div>
+</div>
+<div class="flex items-center justify-center w-10 h-10 bg-slate-100 dark:bg-slate-800 rounded-lg group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400 group-hover:text-primary">lunch_dining</span>
+</div>
+</label>
+<!-- Submit Button -->
+<div class="pt-6">
+<button class="w-full py-4 px-6 bg-primary hover:bg-primary/90 text-white font-bold text-lg rounded-xl shadow-lg shadow-primary/25 transition-all active:scale-[0.98]" type="button">
+                                Submit vote
+                            </button>
+<p class="text-center text-xs text-slate-400 dark:text-slate-500 mt-4">
+                                Once submitted, your vote cannot be changed in this poll.
+                            </p>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer Footer -->
+<footer class="py-8 text-center text-slate-400 dark:text-slate-600 text-sm">
+            © 2024 TeamPulse Internal Tools. Privacy-first decision making.
+        </footer>
+</div>
+</body></html>
